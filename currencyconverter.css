@@ -1,0 +1,140 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9d6e5, #d6eaff);
+  padding: 20px;
+}
+
+/* Converter Container - Glassmorphism Style */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input Field */
+.amount input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+/* Dropdown Layout */
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.from,
+.to {
+  flex: 1;
+}
+
+/* Currency Select Container */
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.select-container img {
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.select-container select {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  color: #333;
+}
+
+/* Exchange Icon */
+.dropdown i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #555;
+}
+
+/* Result Message */
+.msg {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Button Style */
+form button {
+  padding: 0.75rem;
+  background-color: #af4d98;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #932f7a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .dropdown {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dropdown i {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+}
